@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+</head>
+ 
+
+<body>
+    <header>
+        <h1 id="title">MY PROJECTS</h1>
+    </header>
+    <main>
+        <div class="grid-container">
+            <input type="text" id="searchBar" placeholder="Search for Projects" onkeyup="searchContainers()">
+            <div class="container" data-name="my portfolio" onclick="openModal('portfolio')">
+                <h3 id="proname">MY PORTFOLIO</h3>
+                <div class="image-wrapper">
+                    <img id="image" src="portfolio.png" />
+                </div>
+                <a href="https://github.com/Karthikeyadusi/myPortfolio" id="sourceBtn" target="_blank" class="view-link" onclick="stopPropagation(event)">View  Code</a>
+                <a href= "https://karthikeyadusi.github.io/myPortfolio" id="projectBtn" target="_blank" class="view-link" onclick="stopPropagation(event)">View  Website</a>
+            </div>
+            <div class="container" data-name="project k">
+                <h3 id="proname">PROJECT K</h3>
+                <div class="image-wrapper">
+                    <!-- Empty container -->
+                </div>
+            </div>
+            <div class="container" data-name="project x">
+                <h3 id="proname">PROJECT X</h3>
+                <div class="image-wrapper">
+                    <!-- Empty container -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy 2024 Karthikeya Dusi. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
